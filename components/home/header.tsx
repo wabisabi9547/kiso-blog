@@ -4,7 +4,6 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { useSearch } from '@/components/search/search-provider'
 import { useState } from 'react'
-import { PortfolioChat } from '@/components/portfolio/portfolio-chat'
 
 export function Header() {
   const { setIsOpen } = useSearch()
@@ -63,12 +62,6 @@ export function Header() {
           </div>
         </div>
       </motion.header>
-
-      {/* Portfolio Dialog */}
-      <PortfolioChat 
-        isOpen={isPortfolioOpen} 
-        onClose={() => setIsPortfolioOpen(false)} 
-      />
     </>
   )
 } 

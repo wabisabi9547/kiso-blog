@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { getSortedPostsData, PostData } from '@/lib/posts'
 import { Header } from '@/components/home/header'
 import { SearchProvider } from '@/components/search/search-provider'
-import { PortfolioButton } from '@/components/home/portfolio-button'
 
 export const metadata: Metadata = {
   title: 'KISO | Full-Stack Developer & Tech Innovator',
@@ -204,12 +203,11 @@ export default function HomePage() {
                     Full-Stack Developer
                   </p>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    아름다운 코드로 의미있는 경험을 만들어갑니다
+                    2021.10.10 ~ ing...
                   </p>
                 </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <PortfolioButton />
                   <Link href="mailto:wabisabi.9547@gmail.com" className="btn-glass px-6 py-3 rounded-2xl">
                     연락하기
                   </Link>
@@ -218,108 +216,7 @@ export default function HomePage() {
             </div>
           </section>
 
-          {/* About Section */}
-          <section className="py-32 relative z-10">
-            <div className="max-w-6xl mx-auto px-6 lg:px-8">
-              <div className="text-center mb-16">
-                <div className="inline-flex items-center glass-subtle px-4 py-2 rounded-full mb-8">
-                  <span className="text-sm font-medium tracking-wide">About KISO</span>
-                </div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient tracking-wide">
-                  풀스택 개발자의 여정
-                </h2>
-                <p className="text-muted-foreground text-lg max-w-3xl mx-auto leading-relaxed">
-                  현대적인 기술과 사용자 중심의 설계로 비즈니스 가치를 창출하는 개발자입니다.
-                  복잡한 문제를 단순하고 아름다운 솔루션으로 해결하는 것을 즐깁니다.
-                </p>
-              </div>
-
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                {/* Left Side - Stats & Info */}
-                <div className="space-y-8">
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="card-glass p-6 text-center">
-                      <div className="text-3xl font-bold text-gradient mb-2">5+</div>
-                      <div className="text-sm text-muted-foreground">년 경험</div>
-                    </div>
-                    <div className="card-glass p-6 text-center">
-                      <div className="text-3xl font-bold text-gradient mb-2">50+</div>
-                      <div className="text-sm text-muted-foreground">프로젝트</div>
-                    </div>
-                    <div className="card-glass p-6 text-center">
-                      <div className="text-3xl font-bold text-gradient mb-2">3</div>
-                      <div className="text-sm text-muted-foreground">회사 경력</div>
-                    </div>
-                    <div className="card-glass p-6 text-center">
-                      <div className="text-3xl font-bold text-gradient mb-2">100%</div>
-                      <div className="text-sm text-muted-foreground">열정</div>
-                    </div>
-                  </div>
-
-                  <div className="card-glass p-6">
-                    <h3 className="text-lg font-semibold mb-4 text-gradient">주요 전문 분야</h3>
-                    <div className="grid grid-cols-2 gap-3">
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
-                        <span className="text-sm">Frontend Development</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full"></div>
-                        <span className="text-sm">Backend Architecture</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full"></div>
-                        <span className="text-sm">UI/UX Design</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <div className="w-2 h-2 bg-gradient-to-r from-orange-500 to-red-500 rounded-full"></div>
-                        <span className="text-sm">DevOps & Cloud</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Side - Description */}
-                <div className="space-y-6">
-                  <div className="card-glass p-8">
-                    <h3 className="text-xl font-semibold mb-4 text-gradient">개발 철학</h3>
-                    <div className="space-y-4 text-muted-foreground">
-                      <p>
-                        <strong className="text-foreground">사용자 중심</strong> - 
-                        기술을 위한 기술이 아닌, 실제 사용자에게 가치를 제공하는 솔루션을 만들어갑니다.
-                      </p>
-                      <p>
-                        <strong className="text-foreground">지속 가능한 코드</strong> - 
-                        현재뿐만 아니라 미래의 확장과 유지보수를 고려한 코드를 작성합니다.
-                      </p>
-                      <p>
-                        <strong className="text-foreground">끊임없는 학습</strong> - 
-                        빠르게 변화하는 기술 환경에서 지속적인 학습과 성장을 추구합니다.
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="card-glass p-8">
-                    <h3 className="text-xl font-semibold mb-4 text-gradient">핵심 기술</h3>
-                    <div className="flex flex-wrap gap-2">
-                      {[
-                        'React', 'Next.js', 'TypeScript', 'Node.js', 
-                        'Python', 'PostgreSQL', 'AWS', 'Docker'
-                      ].map((tech) => (
-                        <span 
-                          key={tech}
-                          className="px-3 py-1 glass-subtle rounded-full text-sm font-medium hover:glass transition-all duration-200"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
+        
           {/* Featured Posts */}
           {featuredPosts.length > 0 && (
             <section className="py-32">
@@ -332,7 +229,6 @@ export default function HomePage() {
                     Latest Insights
                   </h2>
                   <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                    기술 트렌드와 개발 경험을 공유하는 아티클들
                   </p>
                 </div>
                 
@@ -410,9 +306,6 @@ export default function HomePage() {
                   <h2 className="text-4xl md:text-5xl font-bold mb-6 text-gradient tracking-wide">
                     Recent Stories
                   </h2>
-                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-                    개발 여정과 기술적 통찰을 담은 최신 아티클들
-                  </p>
                 </div>
                 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
